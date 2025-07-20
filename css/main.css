@@ -1,0 +1,294 @@
+@charset "utf-8";
+/* page1 ========================================================*/
+#page-1 {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  /* padding: 200px; */
+  padding: 18.52vh;
+  align-items: flex-start;
+  gap: 20vh;
+  flex-shrink: 0;
+  background: url("../img/page1.jpg") center no-repeat;
+  background-size: contain;
+}
+#page-1 .logo img {
+  width: 277px;
+  height: 48px;
+  flex-shrink: 0;
+  aspect-ratio: 277/48;
+}
+.page-1-inner {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.page-1-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+}
+#page-1 h2 {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 75px; /* 104.167% */
+  letter-spacing: -2.304px;
+}
+#page-1 span {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.92px;
+}
+#page-1 p {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.736px;
+}
+/* page1 end ====================================================*/
+
+/* page2  ====================================================*/
+#page-2 {
+  display: flex;
+  width: 100%;
+  padding: 200px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+.page-2-content {
+  display: flex;
+  height: 600px;
+  padding: 0px 200px;
+  align-items: center;
+  gap: 62px;
+  align-self: stretch;
+}
+.page-2-item {
+  display: flex;
+  padding: 40px 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  border-radius: 30px;
+  border: 1px solid #000;
+  background: linear-gradient(180deg, #000 75%, #1a1a1a 100%);
+  box-shadow: 0px -4px 10px 0px rgba(255, 255, 255, 0.1);
+}
+.page-2-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+#page-2 p {
+  color: var(--main, #00ff37);
+
+  /* 2 */
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.92px;
+}
+#page-2 span {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: -0.46px;
+}
+/* page2 end ====================================================*/
+
+/* page3  ====================================================*/
+#page-3 {
+  display: flex;
+  width: 100%;
+  padding: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.page-3-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}
+.page-3-txt-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+.page-3-txt-list li {
+  display: flex;
+  width: 693px;
+  padding: 32px 64px;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 30px;
+  border: 0.5px solid var(--glass-stroke, rgba(223, 255, 230, 0.2));
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0.02) 77.4%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+
+  /* GLASS */
+  box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 0.1),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset,
+    0.2px 0.2px 2px 0px #fff inset, 0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
+  backdrop-filter: blur(17.5px);
+}
+.page-3-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.page-3-txt p {
+  color: #fff;
+
+  /* 3 */
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.736px;
+}
+.page-3-txt span {
+  color: #fff;
+
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.46px;
+}
+/* page3 end ====================================================*/
+
+/* page4  ====================================================*/
+#page-4 {
+  display: flex;
+  width: 100%;
+  padding: 200px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.page-4-content {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+}
+.page-4-item {
+  display: flex;
+  width: 351.9px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.page-4-item p {
+  color: #fff;
+  text-align: center;
+
+  /* 3 */
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.736px;
+}
+/* page4 end ====================================================*/
+
+/* page5  ====================================================*/
+#page-5 {
+  display: flex;
+  width: 100%;
+  padding: 120px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+}
+/* 무한 캐러샐====================================== */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background: #fdfbf7; /* 배경 색상은 원하는 대로 */
+}
+
+.carousel {
+  display: inline-block;
+  white-space: nowrap;
+  animation: carousel 15s linear infinite;
+}
+
+.carousel span {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.92px;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* 무한 캐러샐 end=================================== */
+.page-5-content {
+  display: flex;
+  padding: 200px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+#page-5 img {
+  width: 860px;
+  height: 487px;
+  aspect-ratio: 860/487;
+}
+/* page5 end ====================================================*/
