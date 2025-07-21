@@ -35,8 +35,9 @@
 .title {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
-#page-1 h2 {
+#page-1 .title {
   color: #fff;
   font-family: Pretendard;
   font-size: 72px;
@@ -44,6 +45,16 @@
   font-weight: 600;
   line-height: 75px; /* 104.167% */
   letter-spacing: -2.304px;
+}
+#page-1 .title h2 {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 75px; /* 104.167% */
+  letter-spacing: -2.304px;
+  overflow: hidden;
 }
 #page-1 span {
   color: #fff;
@@ -53,6 +64,7 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.92px;
+  overflow: hidden;
 }
 #page-1 p {
   color: #fff;
@@ -168,9 +180,11 @@
 
   /* GLASS */
   box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 0.1),
-    4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset,
-    0.2px 0.2px 2px 0px #fff inset, 0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
+    4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset, 0.2px 0.2px 2px 0px #fff inset,
+    0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
   backdrop-filter: blur(17.5px);
+
+  overflow: hidden;
 }
 .page-3-txt {
   display: flex;
@@ -224,6 +238,11 @@
   align-items: center;
   gap: 16px;
 }
+.page-4-item:hover {
+  scale: 1.05;
+  transform: translateY(1px);
+  transition: all 0.3s ease-in;
+}
 .page-4-item p {
   color: #fff;
   text-align: center;
@@ -248,19 +267,24 @@
   gap: 120px;
 }
 /* 무한 캐러샐====================================== */
-.carousel-container {
+.carousel-wrap {
+  position: relative;
   width: 100%;
-  overflow: hidden;
-  background: #fdfbf7; /* 배경 색상은 원하는 대로 */
+  display: flex;
+  background: #fff;
+  overflow-x: hidden;
 }
-
 .carousel {
-  display: inline-block;
-  white-space: nowrap;
-  animation: carousel 15s linear infinite;
+  position: relative;
+  display: flex;
+  animation: infinite-carousel 15s linear infinite;
 }
+.carousel > div {
+  position: relative;
+  padding: 8px 32px;
+  font-size: 20px;
+  white-space: nowrap;
 
-.carousel span {
   color: #000;
   font-family: Pretendard;
   font-size: 40px;
@@ -270,7 +294,7 @@
   letter-spacing: -0.92px;
 }
 
-@keyframes carousel {
+@keyframes infinite-carousel {
   0% {
     transform: translateX(0%);
   }
@@ -278,6 +302,7 @@
     transform: translateX(-100%);
   }
 }
+
 /* 무한 캐러샐 end=================================== */
 .page-5-content {
   display: flex;

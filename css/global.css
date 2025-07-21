@@ -50,6 +50,8 @@ button {
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.736px;
+
+  cursor: pointer;
 }
 h3 {
   color: #fff;
