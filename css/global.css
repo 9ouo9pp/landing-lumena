@@ -33,6 +33,8 @@ a {
 }
 
 button {
+  position: relative;
+  overflow: hidden;
   display: flex;
   padding: 20px 80px;
   justify-content: center;
@@ -40,19 +42,45 @@ button {
   gap: 10px;
 
   border-radius: 50px;
-  background: var(--main, #00ff37);
-
+  background: linear-gradient(142deg, #00ff37 8.18%, #00ff37 97.55%);
   color: #fff;
-  /* 3 */
+  font-family: Pretendard;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.736px;
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%; /* 처음엔 오른쪽 바깥에 위치 */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(142deg, #00ff37 8.18%, #0095ff 97.55%);
+  transition: left 0.2s ease-in;
+  z-index: 0;
+}
+
+button:hover::before {
+  left: 0; /* 오른쪽에서 왼쪽으로 슬라이드되며 색 변경 */
+}
+
+button span {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+
   font-family: Pretendard;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.736px;
-
-  cursor: pointer;
 }
+
 h3 {
   color: #fff;
   text-align: center;

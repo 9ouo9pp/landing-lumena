@@ -75,6 +75,16 @@
   line-height: normal;
   letter-spacing: -0.736px;
 }
+#page-1 .page-1-btn span {
+  color: #fff;
+
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.736px;
+}
 /* page1 end ====================================================*/
 
 /* page2  ====================================================*/
@@ -137,6 +147,16 @@
   font-weight: 400;
   line-height: 23px;
   letter-spacing: -0.46px;
+}
+#page-2 button span {
+  color: #fff;
+
+  font-family: Pretendard;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.736px;
 }
 /* page2 end ====================================================*/
 
