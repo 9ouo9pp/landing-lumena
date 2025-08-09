@@ -91,7 +91,7 @@
 #page-2 {
   display: flex;
   width: 100%;
-  padding: 10.42vw 0px;
+  padding: 10.42vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -100,8 +100,9 @@
 .page-2-content {
   display: flex;
   height: 600px;
-  padding: 0px 10.42vw;
+  /* padding: 0px 10.42vw; */
   align-items: center;
+  justify-content: space-between;
   gap: 62px;
   align-self: stretch;
 }
@@ -158,6 +159,15 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.736px;
+}
+@media screen and (max-width: 1800px) {
+  #page-2 {
+    padding: 10.42vw 4vw;
+  }
+  .page-2-item img {
+    width: 300px;
+    height: 300px;
+  }
 }
 /* page2 end ====================================================*/
 
@@ -235,6 +245,11 @@
   line-height: normal;
   letter-spacing: -0.46px;
 }
+@media screen and (max-width: 1200px) {
+  .page-3-content .img {
+    display: none;
+  }
+}
 /* page3 end ====================================================*/
 
 /* page4  ====================================================*/
@@ -250,11 +265,11 @@
 .page-4-content {
   display: flex;
   align-items: center;
-  gap: 140px;
+  gap: 2vw;
 }
 .page-4-item {
   display: flex;
-  width: 351.9px;
+  /* width: 351.9px; */
   flex-direction: column;
   align-items: center;
   gap: 16px;
@@ -275,6 +290,9 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.736px;
+}
+.page-4-item img {
+  width: 100%;
 }
 /* page4 end ====================================================*/
 
@@ -359,7 +377,7 @@
 
   /* page-2 : 카드 섹션 */
   .page-2-content {
-    gap: 40px;
+    gap: 2vw;
     padding: 0 2vw;
   }
   #page-2 p {
@@ -371,7 +389,7 @@
 
   /* page-3 : 글라스 리스트 */
   .page-3-content {
-    gap: 80px;
+    gap: 2vw;
   }
   .page-3-txt-list li {
     padding: 28px 48px;
@@ -385,7 +403,7 @@
 
   /* page-4 : 아이콘 + 텍스트 */
   .page-4-content {
-    gap: 100px;
+    gap: 40px;
   }
   .page-4-item {
     width: 300px;
