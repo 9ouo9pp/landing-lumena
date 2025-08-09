@@ -165,8 +165,8 @@
     padding: 10.42vw 4vw;
   }
   .page-2-item img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
   }
 }
 /* page2 end ====================================================*/
@@ -379,6 +379,7 @@
   .page-2-content {
     gap: 2vw;
     padding: 0 2vw;
+    height: 500px;
   }
   #page-2 p {
     font-size: 32px;
