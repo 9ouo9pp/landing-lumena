@@ -91,15 +91,16 @@
 #page-2 {
   display: flex;
   width: 100%;
-  padding: 200px 0px;
+  padding: 10.42vw 0px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 100px;
 }
 .page-2-content {
   display: flex;
   height: 600px;
-  padding: 0px 200px;
+  padding: 0px 10.42vw;
   align-items: center;
   gap: 62px;
   align-self: stretch;
@@ -164,7 +165,7 @@
 #page-3 {
   display: flex;
   width: 100%;
-  padding: 200px;
+  padding: 10.42vw;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -200,8 +201,8 @@
 
   /* GLASS */
   box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 0.1),
-    4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset, 0.2px 0.2px 2px 0px #fff inset,
-    0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
+    4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset,
+    0.2px 0.2px 2px 0px #fff inset, 0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
   backdrop-filter: blur(17.5px);
 
   overflow: hidden;
@@ -240,7 +241,7 @@
 #page-4 {
   display: flex;
   width: 100%;
-  padding: 200px 0px;
+  padding: 10.42vw 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -337,3 +338,71 @@
   aspect-ratio: 860/487;
 }
 /* page5 end ====================================================*/
+/* 💻 1400px 이하 반응형 */
+@media screen and (max-width: 1400px) {
+  /* page-1 : 인트로 */
+  #page-1 {
+    padding: 12vh 6vw;
+    gap: 10vh;
+    background-size: cover;
+  }
+  #page-1 h2 {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  #page-1 span {
+    font-size: 32px;
+  }
+  #page-1 p {
+    font-size: 26px;
+  }
+
+  /* page-2 : 카드 섹션 */
+  .page-2-content {
+    gap: 40px;
+    padding: 0 2vw;
+  }
+  #page-2 p {
+    font-size: 32px;
+  }
+  #page-2 span {
+    font-size: 18px;
+  }
+
+  /* page-3 : 글라스 리스트 */
+  .page-3-content {
+    gap: 80px;
+  }
+  .page-3-txt-list li {
+    padding: 28px 48px;
+  }
+  .page-3-txt p {
+    font-size: 28px;
+  }
+  .page-3-txt span {
+    font-size: 18px;
+  }
+
+  /* page-4 : 아이콘 + 텍스트 */
+  .page-4-content {
+    gap: 100px;
+  }
+  .page-4-item {
+    width: 300px;
+  }
+  .page-4-item p {
+    font-size: 28px;
+  }
+
+  /* page-5 : 캐러셀 + 이미지 */
+  .page-5-content {
+    gap: 80px;
+  }
+  #page-5 img {
+    width: 80%;
+    height: auto;
+  }
+  .carousel span {
+    font-size: 32px;
+  }
+}
