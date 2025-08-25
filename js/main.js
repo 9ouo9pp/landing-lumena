@@ -44,7 +44,7 @@ gsap.to(".page-3-txt-list > li", {
     trigger: "#page-3",
     start: "center center",
     toggleActions: "play reverse play reverse"
-    // markers: true
+    // , markers: true
   }
 });
 // page3 end===================================================

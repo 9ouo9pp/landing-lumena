@@ -21,6 +21,7 @@
 }
 .page-1-inner {
   display: flex;
+  max-width: 1400px;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
@@ -89,7 +90,9 @@
 
 /* page2  ====================================================*/
 #page-2 {
+  position: relative;
   display: flex;
+  height: auto;
   width: 100%;
   padding: 10.42vw;
   flex-direction: column;
@@ -99,26 +102,24 @@
 }
 .page-2-content {
   display: flex;
-  height: 600px;
-  /* padding: 0px 10.42vw; */
+  width: 100%;
+  max-width: 1400px;
   align-items: center;
   justify-content: space-between;
-  gap: 62px;
-  align-self: stretch;
+  gap: 24px;
 }
 .page-2-item {
   display: flex;
+  flex: 1 1 400px;
   padding: 40px 30px;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  flex: 1 0 0;
-  align-self: stretch;
+  justify-content: space-between;
+  /* gap: 64px; */
 
   border-radius: 30px;
-  border: 1px solid #000;
-  background: linear-gradient(180deg, #000 75%, #1a1a1a 100%);
-  box-shadow: 0px -4px 10px 0px rgba(255, 255, 255, 0.1);
+  background: var(--desc, linear-gradient(180deg, #000 75%, #2e2e2e 100%));
+  box-shadow: 0 -4px 10px 0 rgba(255, 255, 255, 0.5);
 }
 .page-2-txt {
   display: flex;
@@ -160,19 +161,214 @@
   line-height: normal;
   letter-spacing: -0.736px;
 }
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1600px) {
+  .page-2-item img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-2-content {
+    flex-direction: column;
+  }
+  .page-2-txt {
+    align-items: flex-start;
+  }
+  #page-2 span {
+    text-align: left;
+  }
+  .page-2-item {
+    width: 100%;
+    flex-direction: row;
+    gap: 48px;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 780px) {
   #page-2 {
-    padding: 10.42vw 4vw;
+    padding: 10.42vw;
   }
   .page-2-item img {
     width: 250px;
     height: 250px;
+  }
+  .page-2-item {
+    display: flex;
+    flex: 1 1 400px;
+    padding: 40px 30px;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 /* page2 end ====================================================*/
 
 /* page3  ====================================================*/
 #page-3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* height: 100vh; */
+  padding: 10.42vw 10.42vw;
+  gap: 4vw;
+  /* background-color: rebeccapurple; */
+}
+
+/* 콘텐츠 영역 */
+.page-3-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  flex-wrap: wrap;
+}
+
+.page-3-content .img {
+  width: 30vw;
+  max-width: 400px;
+  height: 50vw;
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.page-3-content .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* 텍스트 리스트 */
+.page-3-txt-list {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 리스트 항목 */
+.page-3-txt-list li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px;
+  gap: 20px;
+  border-radius: 30px;
+  border: 0.5px solid rgba(223, 255, 230, 0.2);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(255, 255, 255, 0.02) 77.4%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 0.1),
+    4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset,
+    0.2px 0.2px 2px 0px #fff inset, 0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
+  backdrop-filter: blur(17.5px);
+  overflow: hidden;
+}
+
+/* 텍스트 */
+.page-3-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.page-3-txt p {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.page-3-txt span {
+  display: inline-block;
+  color: #fff;
+
+  /* 본문 */
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: -0.46px;
+}
+
+/* 아이콘 */
+.page-3-txt-list li img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+/* 반응형 */
+
+@media screen and (max-width: 1200px) {
+  #page-3 {
+    height: auto;
+  }
+  .page-3-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-3-content .img {
+    display: none;
+  }
+
+  .page-3-txt-list {
+    width: 100%;
+  }
+
+  .page-3-txt-list li {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 12px;
+    padding: 16px 24px;
+  }
+
+  .page-3-txt p {
+    font-size: 24px;
+  }
+
+  .page-3-txt span {
+    font-size: 14px;
+  }
+
+  .page-3-txt-list li img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #page-3 {
+    padding: 8vw 5vw;
+  }
+  #page-3 h3 {
+    white-space: nowrap;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .page-3-txt p {
+    font-size: 20px;
+  }
+  .page-3-txt span {
+    font-size: 12px;
+  }
+}
+
+/* page3 end ====================================================*/
+
+/* page4  ====================================================*/
+#page-4 {
+  position: relative;
   display: flex;
   width: 100%;
   padding: 10.42vw;
@@ -181,105 +377,31 @@
   align-items: center;
   gap: 100px;
 }
-.page-3-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 120px;
-}
-.page-3-txt-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 32px;
-}
-.page-3-txt-list li {
-  display: flex;
-  width: 693px;
-  padding: 32px 64px;
-  justify-content: space-between;
-  align-items: center;
-
-  border-radius: 30px;
-  border: 0.5px solid var(--glass-stroke, rgba(223, 255, 230, 0.2));
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(255, 255, 255, 0.02) 77.4%,
-    rgba(255, 255, 255, 0.04) 100%
-  );
-
-  /* GLASS */
-  box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 0.1),
-    4px 4px 8px 0px rgba(255, 255, 255, 0.1) inset,
-    0.2px 0.2px 2px 0px #fff inset, 0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
-  backdrop-filter: blur(17.5px);
-
-  overflow: hidden;
-}
-.page-3-txt {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-}
-.page-3-txt p {
-  color: #fff;
-
-  /* 3 */
-  font-family: Pretendard;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.736px;
-}
-.page-3-txt span {
-  color: #fff;
-
-  /* 본문 */
-  font-family: Pretendard;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.46px;
-}
-@media screen and (max-width: 1200px) {
-  .page-3-content .img {
-    display: none;
-  }
-}
-/* page3 end ====================================================*/
-
-/* page4  ====================================================*/
-#page-4 {
-  display: flex;
-  width: 100%;
-  padding: 10.42vw 0px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-}
 .page-4-content {
+  max-width: 1400px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 2vw;
 }
 .page-4-item {
+  flex: 1;
   display: flex;
-  /* width: 351.9px; */
   flex-direction: column;
   align-items: center;
   gap: 16px;
+}
+.page-4-item img {
+  width: 100%;
+  object-fit: cover;
 }
 .page-4-item:hover {
   scale: 1.05;
   transform: translateY(1px);
   transition: all 0.3s ease-in;
 }
-.page-4-item p {
+
+#page-4 p {
   color: #fff;
   text-align: center;
 
@@ -291,8 +413,28 @@
   line-height: normal;
   letter-spacing: -0.736px;
 }
-.page-4-item img {
-  width: 100%;
+@media screen and (max-width: 1042px) {
+  #page-4 {
+    gap: 4vw;
+  }
+
+  .page-4-item img {
+    width: 100%;
+  }
+  #page-4 p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .page-4-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .page-4-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
 }
 /* page4 end ====================================================*/
 
@@ -356,14 +498,28 @@
   aspect-ratio: 860/487;
 }
 /* page5 end ====================================================*/
-/* 💻 1400px 이하 반응형 */
 @media screen and (max-width: 1400px) {
-  /* page-1 : 인트로 */
+  h3 {
+    font-size: 32px;
+  }
+
+  /* page-1  */
   #page-1 {
     padding: 12vh 6vw;
     gap: 10vh;
     background-size: cover;
+    background-position: right -150px bottom 10px;
+    transition: all 0.4s;
   }
+  #page-1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    border-radius: 30px;
+  }
+
   #page-1 h2 {
     font-size: 60px;
     line-height: 1.2;
@@ -377,15 +533,12 @@
 
   /* page-2 : 카드 섹션 */
   .page-2-content {
-    gap: 2vw;
-    padding: 0 2vw;
-    height: 500px;
   }
   #page-2 p {
     font-size: 32px;
   }
   #page-2 span {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   /* page-3 : 글라스 리스트 */
@@ -402,17 +555,6 @@
     font-size: 18px;
   }
 
-  /* page-4 : 아이콘 + 텍스트 */
-  .page-4-content {
-    gap: 40px;
-  }
-  .page-4-item {
-    width: 300px;
-  }
-  .page-4-item p {
-    font-size: 28px;
-  }
-
   /* page-5 : 캐러셀 + 이미지 */
   .page-5-content {
     gap: 80px;
@@ -423,5 +565,60 @@
   }
   .carousel span {
     font-size: 32px;
+  }
+}
+@media screen and (max-width: 780px) {
+  button {
+    padding: 16px 48px;
+  }
+  #page-1 {
+    background-image: url("../img/page1.jpg") center no-repeat;
+    background-position: right -214px bottom 10px;
+  }
+  #page-1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    border-radius: 30px;
+  }
+  #page-1 .logo img {
+    width: 120px;
+    height: auto;
+  }
+  #page-1 span {
+    font-size: 16px;
+  }
+  #page-1 .title h2 {
+    font-size: 28px;
+    line-height: normal;
+  }
+  #page-1 .page-1-btn span {
+    font-size: 16px;
+  }
+  #page-1 p {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  /* page2 */
+  button span,
+  #page-2 button span {
+    font-size: 16px;
+  }
+  /* page3 */
+  #page-3 {
+    gap: 0;
+  }
+  .page-3-txt-list li {
+    padding: 16px 32px;
+  }
+  .page-3-txt p {
+    font-size: 20px;
+  }
+  .page-3-txt span {
+    font-size: 14px;
   }
 }
