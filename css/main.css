@@ -186,7 +186,7 @@
 }
 @media screen and (max-width: 780px) {
   #page-2 {
-    padding: 10.42vw;
+    padding: 100px 10.42vw;
   }
   .page-2-item img {
     width: 250px;
@@ -349,7 +349,7 @@
 
 @media screen and (max-width: 780px) {
   #page-3 {
-    padding: 8vw 5vw;
+    padding: 10.42vw;
   }
   #page-3 h3 {
     white-space: nowrap;
@@ -535,10 +535,10 @@
   .page-2-content {
   }
   #page-2 p {
-    font-size: 32px;
+    font-size: 24px;
   }
   #page-2 span {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   /* page-3 : 글라스 리스트 */
@@ -555,7 +555,10 @@
     font-size: 18px;
   }
 
-  /* page-5 : 캐러셀 + 이미지 */
+  /* page-5 : 캐러셀 */
+  .carousel > div {
+    font-size: 24px;
+  }
   .page-5-content {
     gap: 80px;
   }
